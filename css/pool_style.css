@@ -1,0 +1,525 @@
+/* ------------------- stationary ------------------- */
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+main, header, footer{
+
+    max-width: 1200;
+    margin: 0 auto;
+    /* max-width: 1920; */
+}
+
+header{
+    background-color: aqua;
+}
+
+footer{
+    background-color: aqua;
+}
+
+#screen{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: red;
+    overflow: hidden;
+}
+
+/* ------------------- game ------------------- */
+#game{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+    overflow: hidden;
+}
+
+#game_background{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+    background-image: url(../img/background.svg);
+    background-size: 100% 100%; /*man kan også bruge Cover, i stedet for at skulle definere højde bredde*/
+}
+
+#middle_ground1{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#middle_ground2{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#game_elements{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+
+#start_screen{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/start_screen.svg);
+    background-size: cover;
+}
+
+#info_screen{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 50%;
+    height: 90%;
+    background-image: url(../img/info_screen.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+#loser_info{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 50%;
+    height: 90%;
+    background-image: url(../img/info_screen.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+} 
+
+#loser_screen{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/loser_screen.svg);
+    background-size: cover;
+}
+
+
+#winner_screen{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/winner_screen.svg);
+    background-size: cover;
+}
+/*-------------------------- game UI --------------------------*/
+
+#game_ui{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    
+}
+
+#board{
+    position: absolute;
+    width: 35%;
+    aspect-ratio: 466.1/106.1;
+    left: -4%;
+    top: 88%;
+    background-image: url(../img/board_life_sc.svg);
+    background-size: cover;
+    scale: 80%;
+    font-size: 4cqw;
+    /* font-size: 10cpw; */
+}
+
+#point_display{
+    position: absolute;
+    aspect-ratio: 240/360;
+    width: 12%;
+    left: 8%;
+    top: 8%;
+    background-image: url(../img/points.svg);
+    background-size: cover;
+}
+
+#points{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 30%;
+    top: 20%;
+
+}
+
+#life_display{
+    position: absolute;
+    aspect-ratio: 310/260;
+    width: 21%;
+    left: 44%;
+    top: 8%;
+    background-image: url(../img/lives.svg);
+    background-size: cover;
+}
+
+#lives{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 75%;
+    top: 20%;
+    font-weight: 600;
+}
+
+/*-------------------------- game figures --------------------------*/
+/*- running -*/
+
+#running_guy_containerL{
+    width: 10%;
+    aspect-ratio: 6/11;
+    position: absolute;
+}
+
+#running_guy_spriteL{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/naked_guy-1.svg);
+    background-size: cover;
+}
+
+#running_guy_containerR{
+    width: 10%;
+    aspect-ratio: 6/11;
+    position: absolute;
+}
+
+#running_guy_spriteR{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/naked_guy-1.svg);
+    background-size: cover;
+}
+
+/*-swimming -*/
+
+#swimming_guy_retainer{
+    width: 10%;
+    aspect-ratio: 400/460;
+    position: absolute;
+    overflow: hidden;
+}
+
+#swimming_guy_container{
+    width: 100%;
+    aspect-ratio: 400/460;
+    position: absolute;
+    left: 0%;
+    top: 90%;
+}
+
+#swimming_guy_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/naked_guy-2.svg);
+    background-size: cover;
+}
+
+/*- waves -*/
+
+#wave1{
+    position: absolute;
+    aspect-ratio: 250/70;
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    width: 30%;
+    left: 6%;
+    top: 68%;
+    pointer-events: none;
+    scale: 55%;
+}
+
+#wave2{
+    position: absolute;
+    aspect-ratio: 250/70;
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    width: 30%;
+    left: 35%;
+    top: 68%;
+    pointer-events: none;
+    scale: 55%;
+}
+
+#wave3{
+    position: absolute;
+    aspect-ratio: 250/70;
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    width: 30%;
+    left: 64%;
+    top: 68%;
+    pointer-events: none;
+    scale: 55%;
+}
+
+#wave4{
+    position: absolute;
+    aspect-ratio: 250/70;
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    width: 30%;
+    left: 20%;
+    top: 60%;
+    pointer-events: none;
+    scale: 55%;
+}
+
+#wave5{
+    position: absolute;
+    aspect-ratio: 250/70;
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    width: 30%;
+    left: 49%;
+    top: 60%;
+    pointer-events: none;
+    scale: 55%;
+}
+
+/*-------------------------- position --------------------------*/
+
+/*- running -*/
+.posL1{
+    left: -10%;
+    top: 24%;
+    scale: 80%;
+}
+
+.posL2{
+    left: -12%;
+    top: 60%;
+    scale: 120%;
+}
+
+.posR1{
+    left: 100%;
+    top: 24%;
+    scale: 80%;
+    transform: rotateY(3.142rad);
+}
+
+.posR2{
+    left: 102%;
+    top: 60%;
+    scale: 120%;
+    transform: rotateY(3.142rad);
+}
+
+/*- swimming -*/
+
+.posS1{
+    left: 16%;
+    top: 60%;
+    scale: 85%;
+}
+
+.posS2{
+    left: 45%;
+    top: 60%;
+    scale: 85%;
+}
+
+.posS3{
+    left: 74%;
+    top: 60%;
+    scale: 85%; 
+}
+
+.posS4{
+    left: 30%;
+    top: 52%;
+    scale: 85%;
+}
+
+.posS5{
+    left: 59%;
+    top: 52%;
+    scale: 85%;
+}
+
+/*-------------------------- animation --------------------------*/
+
+.running_left{
+    animation-name: running_left;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes running_left{
+    from{
+        translate: 0% 0%;
+    }
+
+    to{
+        translate: 1150% 0%;
+    }
+}
+
+.running_right{
+    animation-name: running_right;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes running_right{
+    from{
+        translate: 0% 0%;
+    }
+
+    to{
+        translate: -1150% 0%;
+    }
+}
+
+.diving{
+    animation-name: diving_first;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes diving_first{
+    0%{
+        translate: 0% 0%;
+    }
+
+    50%{
+        translate: 0% -90%;
+    }
+
+    100%{
+        translate: 0% 0%;
+    }
+}
+
+
+.death1{
+    animation-name: death_click_1;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes death_click_1{
+    from{
+        rotate: 0deg;
+        scale: 1;
+        opacity: 1;
+    }
+
+    to{
+        translate: 0% -40%;
+        rotate: 360deg;
+        scale: 0;
+        opacity: 0;
+
+    }
+}
+
+.death2{
+    animation-name: death_click_2;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes death_click_2{
+        from{
+            rotate: 0deg;
+            opacity: 1;
+        }
+    
+        to{
+            rotate: 15deg;
+            opacity: 0;
+        }
+    }
+
+
+/*-------------------------- general funktions --------------------------*/
+/* Husk at fjerne hide fra start, game over og level complete */
+.hide{
+    display: none;
+}
+
+.freeze{
+    animation-play-state: paused;
+}
+
+/*-------------------------- buttons --------------------------*/
+.button{
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 400/210;
+    cursor: pointer;
+    background-size: cover;
+    scale: 95%;
+}
+
+#play_button{
+    top: 65%;
+    left: 70%;
+    background-image: url(../img/play_button.svg);
+}
+
+#replay_button-1{
+    top: 75%;
+    left: 40%;
+    background-image: url(../img/replay_button.svg);
+}
+
+#replay_button-2{
+
+    top: 36%;
+    left: 55%;
+    background-image: url(../img/replay_button.svg);
+}
+
+#info_button-1{
+    top: 65%;
+    left: 50%;
+    background-image: url(../img/info_button.svg);
+}
+
+#info_button-2{
+    top: 36%;
+    left: 25%;
+    background-image: url(../img/info_button.svg);
+}
